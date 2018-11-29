@@ -12,9 +12,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href>
+                    <router-link :to="{name: 'register'}" class="nav-link">
                         <i class="ion-compose"></i>&nbsp;Sign up
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </div>

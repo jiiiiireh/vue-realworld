@@ -8,16 +8,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href>
-                        <i class="ion-compose"></i>&nbsp;New Post
+                        <i class="ion-compose"></i>&nbsp;Sign in
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href>
-                        <i class="ion-gear-a"></i>&nbsp;Settings
+                        <i class="ion-compose"></i>&nbsp;Sign up
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href>Sign up</a>
                 </li>
             </ul>
         </div>

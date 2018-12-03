@@ -32,7 +32,10 @@
                                 placeholder="Password"
                             >
                         </fieldset>
-                        <button class="btn btn-lg btn-primary pull-xs-right">Sign up</button>
+                        <button
+                            @click.prevent="register"
+                            class="btn btn-lg btn-primary pull-xs-right"
+                        >Sign up</button>
                     </form>
                 </div>
             </div>
@@ -41,6 +44,7 @@
 </template>
 
 <script>
+import { REGISTER } from "../store/action-types";
 export default {
     name: "Register",
     data() {
@@ -49,6 +53,14 @@ export default {
             email: "",
             password: ""
         };
+    },
+    methods: {
+        register() {
+            const { username, email, password } = this;
+            this.$store
+                .dispatch(REGISTER, { username, email, password })
+                .then(() => this.$router.push({ name: "home-page" }));
+        }
     }
 };
 </script>

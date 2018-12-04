@@ -8,16 +8,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href>
-                        <i class="ion-compose"></i>&nbsp;New Post
+                        <i class="ion-compose"></i>&nbsp;Sign in
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href>
-                        <i class="ion-gear-a"></i>&nbsp;Settings
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href>Sign up</a>
+                    <router-link :to="{name: 'register'}" class="nav-link">
+                        <i class="ion-compose"></i>&nbsp;Sign up
+                    </router-link>
                 </li>
             </ul>
         </div>

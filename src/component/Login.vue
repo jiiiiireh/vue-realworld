@@ -10,6 +10,7 @@
                     <form>
                         <fieldset class="form-group">
                             <input
+                                v-model="email"
                                 class="form-control form-control-lg"
                                 type="text"
                                 placeholder="Email"
@@ -17,6 +18,7 @@
                         </fieldset>
                         <fieldset class="form-group">
                             <input
+                                v-model="password"
                                 class="form-control form-control-lg"
                                 type="password"
                                 placeholder="Password"
@@ -32,6 +34,12 @@
 
 <script>
 export default {
-    name: "Login"
+    name: "Login",
+    data() {
+        return {
+            email: "",
+            password: ""
+        };
+    }
 };
 </script>

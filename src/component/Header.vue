@@ -7,9 +7,9 @@
                     <a class="nav-link active" href>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href>
+                    <router-link :to="{name: 'login'}" class="nav-link">
                         <i class="ion-compose"></i>&nbsp;Sign in
-                    </a>
+                    </router-link>
                 </li>
                 <li class="nav-item">
                     <router-link :to="{name: 'register'}" class="nav-link">

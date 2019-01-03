@@ -1,1 +1,2 @@
 export const UPDATE_ERROR = "UPDATE_ERROR";
+export const UPDATE_CURRENT_AUTH = "UPDATE_CURRENT_AUTH";

@@ -24,7 +24,10 @@
                                 placeholder="Password"
                             >
                         </fieldset>
-                        <button class="btn btn-lg btn-primary pull-xs-right">Sign in</button>
+                        <button
+                            @click.prevent="login"
+                            class="btn btn-lg btn-primary pull-xs-right"
+                        >Sign in</button>
                     </form>
                 </div>
             </div>
@@ -33,6 +36,8 @@
 </template>
 
 <script>
+import { LOGIN } from "../store/action-types";
+
 export default {
     name: "Login",
     data() {
@@ -40,6 +45,15 @@ export default {
             email: "",
             password: ""
         };
+    },
+    methods: {
+        login() {
+            const { email, password } = this;
+            this.$store
+                .dispatch(LOGIN, { email, password })
+                .then(() => this.$router.push({ name: "home-page" }))
+                .catch();
+        }
     }
 };
 </script>

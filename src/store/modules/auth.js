@@ -6,6 +6,10 @@ const state = {
     user: {},
     isAuthenticated: false
 };
+const getters = {
+    currentUser: state => state.user,
+    isAuthenticated: state => state.isAuthenticated
+};
 const actions = {
     [REGISTER]({ __dispatch }, payload) {
         return axios.post("users", { user: payload });
@@ -28,6 +32,7 @@ const mutations = {
 };
 export default {
     state,
+    getters,
     actions,
     mutations
 };
